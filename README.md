@@ -25,6 +25,18 @@ transpiles the embedded JSX in-browser.
    Jump animates a rise to a bar at the simulated height; Heptathlon (an
    aggregate score, not a single physical motion) shows a fill bar instead.
 4. **Pause / Resume** freezes and resumes the in-progress animation.
+5. Hurdle events (110m/100m/400m/60m Hurdles) show white hurdle bars across
+   each lane. Relay events (4x100m, 4x400m) show dashed yellow bars marking
+   the three baton-exchange zones, and each runner is drawn as a ring
+   (team color) around a smaller dot that cycles white → yellow → blue →
+   orange as the baton moves through the four legs.
+6. Track position now scales to the real event distance in laps of a 400m
+   oval: 100m ≈ a quarter lap, 400m = 1 lap, 800m = 2 laps, 1500m ≈ 3.75
+   laps, up to 10,000m = 25 laps. Shorter races only cover part of the
+   track instead of always doing a full loop; longer ones lap it multiple
+   times. Hurdle and baton-exchange marks scale with this too, so they land
+   at the right point along the actual race distance. Animation speed is
+   still compressed for watchability, not real pace.
 
 ## Important limitations (read before treating outputs as real predictions)
 
